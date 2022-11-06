@@ -18,7 +18,7 @@ def setvalue():
             flash("Key is needed!!")
         else:
             redis_database.set(key,value)
-            return redirect(url_for('index'))
+            return redirect(url_for('base'))
     return render_template("setvalue.html")
 
 @app.route('/getvalue',methods = ('GET','POST'))
